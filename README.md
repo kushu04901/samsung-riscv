@@ -27,4 +27,4 @@
 <summary> Task-1: RISC-V based lab screenshots </summary>
 <br>
 
-![image alt](
+![image alt](https://github.com/kushu04901/samsung-riscv/blob/77022a334551089ac438d3ad7f4a9888877389a2/Task1/risc-v%20based%20labvideo2.png)

@@ -17,3 +17,14 @@
 <summary> Task-1: C based lab screenshots </summary>
 <br>
 
+![image alt](https://github.com/kushu04901/samsung-riscv/blob/5f199e3496a63c141391b7a4a87c69d9dd1af18b/Task1/sum1toNc.png)
+
+### The above is the lab screenshot of a C code to find the sum of number for 1 to any defined number-N. 
+
+</details>
+
+<details>
+<summary> Task-1: RISC-V based lab screenshots </summary>
+<br>
+
+![image alt](

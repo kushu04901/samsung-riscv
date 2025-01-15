@@ -94,3 +94,135 @@ The below is the screenshot of Ofast object dump optimisation
 
 ![image alt](https://github.com/kushu04901/samsung-riscv/blob/756a6df9e80a30bad910115057df032f900206fa/task2/areaofrectangleriscvfast.png)
 
+</details>
+
+
+# Task-3
+
+<details>
+<summary> Task-3: Risc-V R,I,S,B,U and J instruction types</summary>
+<br>
+
+In the RISC-V instruction set architecture, the instruction types are categorized based on how they handle operands and the kind of operations they perform. The types you mentioned—R, I, S, B, U, and J—are distinct formats that represent different kinds of instructions. Here's an overview of each:
+### 1. **R-type (Register)**
+
+**Format**:
+```
+       | opcode (7 bits) | rd (5 bits) | funct3 (3 bits) | rs1 (5 bits) | rs2 (5 bits) | funct7 (7 bits) |
+	
+```
+
+- **Purpose**: Used for arithmetic and logical instructions where the operands are registers.
+- **Examples**:  
+  - `ADD`, `SUB`, `AND`, `OR`, `XOR`, `SLL`, `SRL`, `SRA`
+- **Explanation**: The operation is performed between the two source registers (`rs1`, `rs2`), and the result is stored in the destination register (`rd`).
+
+---
+
+### 2. **I-type (Immediate)**
+
+**Format**:
+```
+       | opcode (7 bits) | rd (5 bits) | funct3 (3 bits) | rs1 (5 bits) | imm (12 bits) |
+
+	
+```
+
+- **Purpose**: Used for instructions that involve an immediate value (constant) and a register.
+- **Examples**:  
+  - `ADDI`, `ANDI`, `ORI`, `SLTI`, `LUI`, `JALR`
+- **Explanation**: The immediate value (`imm`) is either added, ANDed, or processed with the register (`rs1`), and the result is stored in the destination register (`rd`).
+
+---
+
+### 3. **S-type (Store)**
+
+**Format**:
+```
+| opcode (7 bits) | imm[4:0] (5 bits) | funct3 (3 bits) | rs1 (5 bits) | rs2 (5 bits) | imm[11:5] (7 bits) |
+	
+```
+
+- **Purpose**: Used for store instructions, where data is written to memory.
+- **Examples**:  
+  - `SB`, `SH`, `SW`
+- **Explanation**: The value in `rs2` is stored at the memory address computed using the value in `rs1` and the immediate offset (`imm`).
+- 
+---
+
+### 4. **B-type (Branch)**
+
+**Format**:
+```
+| opcode (7 bits) | imm[12] (1 bit) | imm[10:5] (6 bits) | funct3 (3 bits) | rs1 (5 bits) | rs2 (5 bits) | imm[4:1] (4 bits) | imm[11] (1 bit) |	
+```
+
+- **Purpose**: Used for branch instructions, which alter the control flow based on a condition.
+- **Examples**:  
+  - `BEQ`, `BNE`, `BLT`, `BGE`, `BLTU`, `BGEU`
+- **Explanation**: These instructions compare registers (`rs1`, `rs2`) and, if the condition is true, branch to the target address computed with the immediate (`imm`).
+
+---
+
+### 5. **U-type (Upper Immediate)**
+
+**Format**:
+```
+| opcode (7 bits) | rd (5 bits) | imm[31:12] (20 bits) |	
+```
+
+- **Purpose**: Used for instructions that manipulate upper 20 bits of an immediate value.
+- **Examples**:  
+  - `LUI` (Load Upper Immediate), `AUIPC` (Add Upper Immediate to PC)
+- **Explanation**: These instructions load a 20-bit immediate value into the upper part of a register (`rd`) and perform operations accordingly.
+
+---
+
+### 6. **J-type (Jump)**
+
+**Format**:
+```
+| opcode (7 bits) | rd (5 bits) | imm[19:1] (20 bits) | imm[11] (1 bit) | imm[10:1] (10 bits) |
+	
+```
+
+- **Purpose**: Used for jump instructions that alter the control flow.
+- **Examples**:  
+  - `JAL` (Jump and Link)
+- **Explanation**: The `JAL` instruction computes the target address using a 20-bit immediate and saves the return address in the destination register (`rd`).
+
+---
+</details>
+<details>
+<summary> Task-3: 32 bit instruction code of 15 instructions </summary>
+<br>
+![image alt](https://github.com/kushu04901/samsung-riscv/blob/756a6df9e80a30bad910115057df032f900206fa/task2/areaofrectangleriscvfast.png)
+
+### Instruction:
+```
+1.lui a0, 0x2b
+```
+- **Operation**: `LUI` (Load Upper Immediate)
+ ### Instruction Type:
+- **Type**: U-type
+  - The `LUI` instruction is a **U-type** instruction, which has a specific format for handling immediate values.
+```
+| opcode (7 bits) | rd (5 bits) | imm[31:12] (20 bits) |
+```
+
+Where:
+- **Opcode**: `0110111` for the `LUI` instruction.
+- **rd**: Destination register `a0`, which corresponds to `x10` in RISC-V. The binary representation for `x10` is `01010`.
+- **Immediate**: The 20-bit immediate value. The immediate value `0x2b` becomes `0x2b00000` when shifted to fill the upper 20 bits of the register.
+
+## Assembling the Instruction
+
+- **Opcode for `LUI`**: `0110111`
+- **Destination Register (`a0`)**: `x10` → `01010` in binary.
+- **Immediate**: `0x2b` → `0x2b00000` (binary: `00101011000000000000000000000000`).
+
+Thus, the full 32-bit binary encoding for `lui a0, 0x2b` is:
+```
+| 0110111 | 01010 | 00000000001010110000 |
+
+```

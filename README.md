@@ -59,6 +59,16 @@ We now use the command:
 ```
 
 This also will show the assembly code and the memory location it is stored in but it is optimized for maximum speed. It enables aggressive optimizations that might trade off correctness in some edge cases to produce faster code.
+</details>
+
+-------------------------------------------------
+
+# Task-2
 
 <details>
-<summary><b>Task 2
+<summary> Task-2: Screenshot of Area of Rectagle C-code using spike instruction </summary>
+<br>
+The below programme is the code to calculate area of rectangle.
+
+![image alt](https://github.com/kushu04901/samsung-riscv/blob/5f199e3496a63c141391b7a4a87c69d9dd1af18b/Task1/sum1toNc.png)
+

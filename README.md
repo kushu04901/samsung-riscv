@@ -80,4 +80,11 @@ The command is
 ```
 The below is the given screenshot of the riscv taget of area of the rectangle using spike.
 
-![image alt](https://github.com/kushu04901/samsung-riscv/blob/e47d6ac239a14b44f4e5ee77f6f8d19860725965/task2/areaofractangle.png)
+![image alt](https://github.com/kushu04901/samsung-riscv/blob/9cdd6a910b2a5129cb46ab21152f78be1f8232f4/task2/spike1.png)
+
+<details>
+<summary> Task-2: Screenshot of RISC-V object dump optimisation of Area of Rectagle programme </summary>
+<br>
+The below is the screenshot of the O1 object dump optimisation.
+
+![image alt](https://github.com/kushu04901/samsung-riscv/blob/9cdd6a910b2a5129cb46ab21152f78be1f8232f4/task2/spike1.png)

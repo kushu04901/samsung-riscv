@@ -87,4 +87,9 @@ The below is the given screenshot of the riscv taget of area of the rectangle us
 <br>
 The below is the screenshot of the O1 object dump optimisation.
 
-![image alt](https://github.com/kushu04901/samsung-riscv/blob/9cdd6a910b2a5129cb46ab21152f78be1f8232f4/task2/spike1.png)
+![image alt](https://github.com/kushu04901/samsung-riscv/blob/6dae2189e3e8e7539aa031058ea99e8959b65b57/task2/arearectangleriscv.png)
+
+The below is the screenshot of Ofast object dump optimisation
+
+![image alt](https://github.com/kushu04901/samsung-riscv/blob/6dae2189e3e8e7539aa031058ea99e8959b65b57/task2/arearectangleriscv.png)
+

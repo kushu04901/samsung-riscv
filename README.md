@@ -196,7 +196,8 @@ In the RISC-V instruction set architecture, the instruction types are categorize
 <details>
 <summary> Task-3: 32 bit instruction code of 15 instructions </summary>
 <br>
-![image alt](https://github.com/kushu04901/samsung-riscv/blob/756a6df9e80a30bad910115057df032f900206fa/task2/areaofrectangleriscvfast.png)
+![image alt]()
+
 
 ### Instruction:
 ```

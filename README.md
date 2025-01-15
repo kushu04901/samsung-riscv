@@ -70,5 +70,14 @@ This also will show the assembly code and the memory location it is stored in bu
 <br>
 The below programme is the code to calculate area of rectangle.
 
-![image alt](https://github.com/kushu04901/samsung-riscv/blob/5f199e3496a63c141391b7a4a87c69d9dd1af18b/Task1/sum1toNc.png)
+![image alt](https://github.com/kushu04901/samsung-riscv/blob/e47d6ac239a14b44f4e5ee77f6f8d19860725965/task2/areaofractangle.png)
 
+Now the programme will be run using SPIKE.This command is used to run a riscv target programme.
+The command is
+
+```
+       spike pk	
+```
+The below is the given screenshot of the riscv taget of area of the rectangle using spike.
+
+![image alt](https://github.com/kushu04901/samsung-riscv/blob/e47d6ac239a14b44f4e5ee77f6f8d19860725965/task2/areaofractangle.png)
